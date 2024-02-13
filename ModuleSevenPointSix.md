@@ -1,37 +1,29 @@
-#include <iostream>
-using namespace std;
-//
+    #include <iostream>
+    using namespace std;
 
     int main() {
-// loop for outer rows, iterates till 5 counts
+//'choice' stores the user input
 
-    for (int i = 1; i <= 5; ++i) {
-    
-   // loop for columns, iterates till 3 counts (nested, so that the conditions for printing an asterisk is dependent on its position relative to the outer row).
-        
-        for (int j = 1; j <= 3; ++j) {
-        
-  // asterisks for row 1, 3, and 5
-  
-            if (i == 1 || i == 3 || i == 5) {
-                cout << "*";
-            } else {
-  // asterisks are printed only for the first column in other rows
-  
-                if (j == 1) {
-                    cout << "*";
-                } else {
-  // a space is printed for the second and third columns in other rows
-  
-                    cout << " ";
-                }
-            }
+    char choice;
+//left and right handed initialized to 0
+
+    int leftHanded = 0;
+    int rightHanded = 0;
+// do-while loop with a if statement. Do passes the user input to 'choice', While ends the loop if X is entered, and the if statement adds a value to either left or right handed (lh++,rh++).
+
+    do {
+        cout << "Enter an L if you are left-handed, an R if you are right-handed or X to quit: ";
+        cin >> choice;
+
+        if (choice == 'L') {
+            leftHanded++;
+        } else if (choice == 'R') {
+            rightHanded++;
         }
-  // end
-  
-        cout << endl;
-    }
-    
-    return 0;
-}
+    } while (choice != 'X');
+// Prints the number of lh and rh students
 
+    cout << "Number of left-handed students: " << leftHanded << endl;
+    cout << "Number of right-handed students: " << rightHanded << endl;
+
+    return 0;
