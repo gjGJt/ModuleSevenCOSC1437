@@ -1,21 +1,25 @@
-    #include <iostream>
-    using namespace std;
-
-    int main() {
-//variables to be used in the loop and then multiplied
-
-    int num, numten, numtwo;
-// loop
-
-    for (num = 0; num < 10; num++) {
-        //multiplies the numbers in the loop by 10 and 2
-        numten = num * 10;
-        numtwo = num * 2;
-        
-// prints the numbers from 0 to ten along with their values multiplied by 2 and 10
+ 
 
       cout << "num: " << num << ", numten: " << numten << ", numtwo: " << numtwo << endl;
     }
 
     return 0;
     }
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+    cout << "0 through 10 multiplied by 2 and by 10." << endl;
+    
+    int i = 0;
+    while (i <= 10) {
+        cout << "Number: " << i << endl;
+        cout << "Multiplied by 2: " << (i * 2) << endl;
+        cout << "Multiplied by 10: " << (i * 10) << endl;
+        i++;
+    }
+    
+    return 0;
+    }
+
